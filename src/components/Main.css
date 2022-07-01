@@ -1,0 +1,4 @@
+.main_bg{
+    background-image: url('../../public/images/login-screen-bg.png');
+    min-height: 100vh;
+}

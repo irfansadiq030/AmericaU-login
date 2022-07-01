@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.login-container2 {
+  background-image: url('../public/images/plain-bg.png');
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-
-.App-link {
-  color: #61dafb;
+.logo{
+  max-width: 137px;
 }
+/* .fani {
+  background-image: url('../public/images/vector.png');
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/********  START Background Characters Responsiveness */
+@media screen and (max-width:500px) {
+  .bg_custom_style {
+    max-width: 95% !important;
+    top:260px;
+    /* z-index: 1; */
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:800px) {
+  .bg_custom_style {
+    max-width: 90% !important;
+    top: 250px;
+    /* z-index: 1; */
   }
+}
+@media only screen and (min-width : 1025px) {
+  .bg_custom_style {
+    max-width: 90% !important;
+    top: 0;
+    /* z-index: 1; */
+  }
+}
+/********  END Background Characters Responsiveness */
+
+/********  START Login Container style */
+.login_container{
+  min-width: 488px;
+  min-height: 380px;
+  border: 2px solid #002356;
+  background-color: #002356;
+  z-index: 2;
+  position: fixed;
+  margin:0 auto !important;
+  /* position: fixed; */
 }
