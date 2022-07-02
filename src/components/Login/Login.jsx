@@ -19,16 +19,16 @@ const Login = () => {
                 </div>
             </form>
             <div className="mt-3 uppercase flex justify-end forgot-pwd-container w-full">
-                <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link>
+                <Link to="/forgotpassword" className='forgot-pwd-txt'>Forgot Password?</Link>
             </div>
             <div className='flex flex-col items-center'>
                 <a className='or-text' href='/'>OR</a>
                 <a href='btn' className="uppercase login-class-btn">Login with class link</a>
 
                 {/* this Text will be display only on Tablet and Mobile screen */}
-                <Link to="/resetpassword" className='forgot-pwd-txt2'>Forgot Password?</Link>
+                <Link to="/forgotpassword" className='forgot-pwd-txt2'>Forgot Password?</Link>
             </div>
-            <div className="links-container flex justify-between w-full mb-3 items-end">
+            <div className="links-container flex justify-between w-full items-end">
                 <a href="/"> <h1 className="learn-more-heading uppercase">Learn More</h1> </a>
                 <div className="flex flex-col items-center">
                     <p className='dont-have-account uppercase'>Don't have an account?</p>

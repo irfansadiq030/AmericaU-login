@@ -23,7 +23,7 @@
 
     .components-container {
         width: 100% !important;
-        margin-top: 40px;
+        /* margin-top: 40px; */
     }
     .logo {
         width: 100%;
@@ -36,7 +36,7 @@
 @media screen and (min-width:768px) {
     .components-container {
         width: 80% !important;
-        margin-top: 40px;
+        /* margin-top: 40px; */
     }
     .logo {
         width: 100%;
@@ -47,7 +47,7 @@
 @media screen and (min-width:1100px) {
     .components-container {
         width: 65% !important;
-        margin-top: 40px;
+        /* margin-top: 40px; */
     }
 
 }
@@ -55,13 +55,12 @@
 @media screen and (min-width:1360px) {
     .components-container {
         width: 45% !important;
-        margin-top: 40px;
     }
 
 }
 
 @media screen and (min-width:1500px) {
     .components-container {
-        width: 57% !important;
+        width: 50% !important;
     }
 }
