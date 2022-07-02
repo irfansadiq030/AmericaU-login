@@ -10,9 +10,10 @@
 
 .components-container {
     width: 45%;
-    min-height: 400px;
+    min-height:80%;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid red;
 }
 
 /* Component Container Responsiveness */
