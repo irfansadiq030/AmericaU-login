@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom'
 
 const Main = () => {
     return (
-        <div className='container-fluid p-5 bg-top bg-cover main_bg'>
+        <div className='container-fluid p-5 bg-top bg-cover main_bg relative'>
             <Header />
             <div className="components-container">
                 <Routes>
