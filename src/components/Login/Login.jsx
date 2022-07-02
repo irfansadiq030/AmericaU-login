@@ -14,17 +14,21 @@ const Login = () => {
                 <div className="field-container">
                     <input type={'password'} name="password" placeholder="Password" class="w-full input-field" />
                 </div>
-                <a href='/'> <div class="btn-americau green-btn mt-5 w-full uppercase">Login</div></a>
+                <div className="login-btn-au">
+                    <a className='' href='/'> <div class="btn-americau green-btn mt-5 w-full uppercase">Login</div></a>
+                </div>
             </form>
             <div className="mt-3 uppercase flex justify-end forgot-pwd-container w-full">
-                <div className='flex flex-col items-center'>
-                    <a className='' href='/'>OR</a>
-                    <a href='btn' className="uppercase login-class-btn">Login with class link</a>
-                </div>
-                <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password</Link>
+                <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link>
             </div>
+            <div className='flex flex-col items-center'>
+                <a className='or-text' href='/'>OR</a>
+                <a href='btn' className="uppercase login-class-btn">Login with class link</a>
 
-            <div className="flex justify-between w-full mb-3 items-end">
+                {/* this Text will be display only on Tablet and Mobile screen */}
+                <Link to="/resetpassword" className='forgot-pwd-txt2'>Forgot Password?</Link>
+            </div>
+            <div className="links-container flex justify-between w-full mb-3 items-end">
                 <a href="/"> <h1 className="learn-more-heading uppercase">Learn More</h1> </a>
                 <div className="flex flex-col items-center">
                     <p className='dont-have-account uppercase'>Don't have an account?</p>

@@ -1,9 +1,10 @@
 .login-container {
-    width: 40%;
+    width: 100%;
     min-height: 400px;
     border: 12px solid #002356;
     background-color: #fff;
     padding: 5px 30px;
+    margin-left: auto;
 }
 
 .form-heading {
@@ -19,6 +20,7 @@
     font-size: 30px;
     font-family: 'Acme', sans-serif;
 }
+
 .input-field input {
     font-size: 16px;
 }
@@ -48,16 +50,23 @@
         -1px -1px 0 #000;
 }
 
-/* .forgot-pwd-txt {
-    padding-left: 0%;
-} */
+.or-text {
+    margin-top: -27px;
+    font-family: 'Brady Bunch Remastered';
+    color: white;
+    font-size: 17px;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+}
 
 .login-class-btn {
     background: #00a0c7;
     color: #fff;
     padding: 5px 30px;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Brady Bunch Remastered';
     box-shadow: inset 7px -7px rgb(0 0 0 / 42%);
     border-bottom: 2px solid #000;
@@ -85,7 +94,7 @@
         1px 3px 2px #000,
         1px -1px 0 #000,
         -1px -1px 0 #000;
-        margin-top: 10px;
+    margin-top: 10px;
 }
 
 .signup-text {
@@ -98,23 +107,28 @@
         -1px -1px 0 #000;
     margin-top: -10px;
 }
+.links-container{
+    margin-top: 20px;
+}
 
 /* Responsiveness */
-@media screen and (max-width:400px) 
-{
-    .signup-text,.learn-more-heading {
-        font-size:20px !important;
+@media screen and (max-width:400px) {
+
+    .signup-text,
+    .learn-more-heading {
+        font-size: 25px !important;
     }
-    .dont-have-account{
-        font-size: 12px;
+
+    .dont-have-account {
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+    .links-container{
+        margin-top: 5px;
     }
 }
 
 @media screen and (max-width:500px) {
-    .login-container {
-        width: 100% !important;
-        margin-top: 40px;
-    }
 
     .forgot-pwd-container {
         flex-direction: column;
@@ -126,19 +140,101 @@
     .forgot-pwd-txt {
         padding-left: 0px;
     }
-    .signup-text,.learn-more-heading {
+
+    .signup-text,
+    .learn-more-heading {
         font-size: 30px;
     }
-    
+    .login-class-btn{
+        font-size: 22px;
+    }
+    .links-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
 }
 
 @media screen and (max-width:768px) {
-    .login-container {
-        width: 80%;
+
+    .or-text {
+        margin-top: 10px;
+    }
+
+    .forgot-pwd-container {
+        display: none;
+    }
+
+    .forgot-pwd-txt2 {
+        font-family: 'Brady Bunch Remastered';
+        color: white;
+        font-size: 17px;
+        margin-top: 10px;
+        text-shadow: -1px 1px 2px #000,
+            1px 3px 2px #000,
+            1px -1px 0 #000,
+            -1px -1px 0 #000;
+    }
+}
+
+/* Hiding elements after tablet screeen */
+@media screen and (min-width:770px) {
+    .forgot-pwd-txt2 {
+        display: none;
     }
 }
 @media screen and (min-width:1500px) {
-    .login-container {
-        width: 80%;
+    .form-heading {
+        font-size: 80px;
+    }
+
+    .btn-americau {
+        font-size: 60px;
+    }
+
+    .login-btn-au {
+        margin-top: 35px;
+    }
+
+    .forgot-pwd-txt {
+        font-size: 25px;
+    }
+
+    .or-text {
+        font-size: 25px;
+    }
+
+    .login-class-btn {
+        font-size: 45px;
+    }
+
+    .forgot-pwd-container {
+        margin-top: 15px;
+    }
+
+    .learn-more-heading,
+    .signup-text {
+        font-size: 60px;
+    }
+
+    .dont-have-account {
+        font-size: 25px;
+    }
+
+    .or-text {
+        margin-top: -35px;
+    }
+    .links-container{
+        margin-top: 10px;
+    }
+    .input-field{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 40px;
+    }
+    .btn-americau{
+        font-size: 80px;
     }
 }

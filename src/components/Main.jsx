@@ -9,12 +9,14 @@ const Main = () => {
     return (
         <div className='container-fluid p-5 bg-top bg-cover main_bg pb-32'>
             <Header />
-            <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/resetpassword" element={<ResetPassword />} />
+            <div className="components-container">
+                <Routes>
 
+                    <Route path="/" element={<Login />} />
+                    <Route path="/resetpassword" element={<ResetPassword />} />
 
-            </Routes>
+                </Routes>
+            </div>
 
         </div>
     )

@@ -7,12 +7,12 @@ const ResetPassword = () => {
         <>
 
             <div className="reset-password-container mx-auto flex justify-center flex-col items-center">
-            <Link to="/" className="back-button">
-                <img src="images/icon-back.png" alt="" srcset="" />
-            </Link>
+                <Link to="/" className="back-button">
+                    <img src="images/icon-back.png" alt="" srcset="" />
+                </Link>
 
                 {/* Form */}
-                <h1 className='form-heading uppercase'>Reset Password</h1>
+                <h1 className='reset-form-heading uppercase'>Reset Password</h1>
                 <form action="/" className='w-full'>
                     <div className="field-container mb-5">
                         <input name="Username" placeholder="Username" class="w-full input-field" />
@@ -22,7 +22,7 @@ const ResetPassword = () => {
                     </div>
                     <a href='/'> <div class="btn-americau green-btn mt-5 w-full uppercase">Submit</div></a>
                 </form>
-                <div className="flex justify-between w-full my-5 items-end">
+                <div className="links-container flex justify-between w-full mb-3 items-end">
                     <a href="/"> <h1 className="learn-more-heading uppercase">Learn More</h1> </a>
                     <div className="flex flex-col items-center">
                         <p className='dont-have-account uppercase'>Don't have an account?</p>
