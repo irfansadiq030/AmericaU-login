@@ -1,8 +1,8 @@
 import React from 'react'
-import './ResetPassword.css'
+import './ForgotPassword.css'
 import { Link } from 'react-router-dom'
 
-const ResetPassword = () => {
+const ForgotPassword = () => {
     return (
         <>
             <div className="forgot-password-container mx-auto flex flex-col">
@@ -17,15 +17,12 @@ const ResetPassword = () => {
 
                 {/* Box Content Container */}
                 <main className='login-main flex-col flex items-center justify-center'>
-                    <form action="/" className='w-full login-form flex justify-between flex-col'>
+                    <form action="/" className='w-full reset-form login-form flex justify-between flex-col'>
                         <div className="">
-                            <input name="Username" type="password" placeholder="New Password" class="w-full input-field" />
+                            <input name="Username" type="text" placeholder="Username" class="w-full input-field" />
                         </div>
                         <div className="">
-                            <input type="password" name="password" placeholder="Confirm Password" class="w-full input-field" />
-                        </div>
-                        <div className="">
-                            <button className='btn-americau green-btn w-full uppercase'>Submit</button>
+                            <button className='btn-americau green-btn w-full uppercase'>Reset</button>
                         </div>
                     </form>
 
@@ -33,7 +30,7 @@ const ResetPassword = () => {
 
                 {/* Footer Container */}
                 <div className="bottom-container flex justify-between items-end">
-                <Link to="/forgotpassword"> <h1 className="learn-more-heading uppercase">Learn More</h1> </Link>
+                    <Link to="/forgotpassword"> <h1 className="learn-more-heading uppercase">Learn More</h1> </Link>
                     <div className="flex flex-col items-center">
                         <p className='dont-have-account uppercase'>Don't have an account?</p>
                         <a href="/"><h1 className="signup-text uppercase">Sign Up</h1></a>
@@ -44,4 +41,4 @@ const ResetPassword = () => {
     )
 }
 
-export default ResetPassword
+export default ForgotPassword

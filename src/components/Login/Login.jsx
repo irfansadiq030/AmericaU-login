@@ -19,27 +19,27 @@ const Login = () => {
                             <input name="Username" type="text" placeholder="Username" class="w-full input-field" />
                         </div>
                         <div className="">
-                            <input type={'password'} name="password" placeholder="Password" class="w-full input-field" />
+                            <input type='password' name="password" placeholder="Password" class="w-full input-field" />
                         </div>
                         <div className="">
                             <button className='btn-americau green-btn w-full uppercase'>Login</button>
                         </div>
                     </form>
                     <div className="forgot-pwd-container uppercase flex justify-end w-full">
-                        <Link to="/forgotpassword" className='forgot-pwd-txt'>Forgot Password?</Link>
+                        <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link>
                     </div>
                     <div className='flex flex-col items-center'>
-                        <Link className='or-text' to="/" >OR</Link>
+                        <Link className='or-text' to="/messageviewer" >OR</Link>
                         <Link to="/" className="uppercase login-class-btn">Login with class link</Link>
 
                         {/* this Text will be display only on Tablet and Mobile screen */}
-                        <Link to="/forgotpassword" className='forgot-pwd-txt2'>Forgot Password?</Link>
+                        <Link to="/resetpassword" className='forgot-pwd-txt2'>Forgot Password?</Link>
                     </div>
                 </main>
 
                 {/* Footer Container */}
                 <div className="bottom-container flex justify-between items-end">
-                    <a href="/"> <h1 className="learn-more-heading uppercase">Learn More</h1> </a>
+                <Link to="/forgotpassword"> <h1 className="learn-more-heading uppercase">Learn More</h1> </Link>
                     <div className="flex flex-col items-center">
                         <p className='dont-have-account uppercase'>Don't have an account?</p>
                         <a href="/"><h1 className="signup-text uppercase">Sign Up</h1></a>

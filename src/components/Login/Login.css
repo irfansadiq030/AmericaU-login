@@ -21,13 +21,22 @@
     font-size: 60px;
     color: #002356;
 } */
+input[type="text"]::placeholder{
+    text-transform: uppercase;
+}
+input[type="password"]::placeholder{
+    text-transform: uppercase;
+}
 
-.input-field {
+.input-field{
     border: 4px solid #002356;
     padding-left: 10px;
     border-radius: 0;
-    font-size: 30px;
+    font-size:25px;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
     font-family: 'Acme', sans-serif;
+    /* text-transform: uppercase; */
 }
 
 /* .input-field input {
