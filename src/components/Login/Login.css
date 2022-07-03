@@ -1,17 +1,26 @@
 .login-container {
     width: 100%;
-    min-height: 400px;
+    height: 100%;
     border: 12px solid #002356;
     background-color: #fff;
     padding:5px 30px 0px 30px;
     margin-left: auto;
 }
-
-.form-heading {
+.login-form{
+    width: 100%;
+    height: 200px;
+}
+.login-main{
+    flex: 1 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+}
+/* .form-heading {
     font-family: 'Brady Bunch Remastered';
     font-size: 60px;
     color: #002356;
-}
+} */
 
 .input-field {
     border: 4px solid #002356;
@@ -21,9 +30,9 @@
     font-family: 'Acme', sans-serif;
 }
 
-.input-field input {
+/* .input-field input {
     font-size: 16px;
-}
+} */
 
 .btn-americau {
     padding: 0;
@@ -149,7 +158,7 @@
         font-size: 30px;
     }
     .login-class-btn{
-        font-size: 22px;
+        font-size: 21px;
     }
     .links-container{
         flex-direction: column-reverse;
@@ -179,6 +188,19 @@
             1px -1px 0 #000,
             -1px -1px 0 #000;
     }
+    .bottom-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        height: 20vh !important;
+    }
+    .login-main{
+        padding: 0;
+    }
+    .header{
+        width: 100%;
+        padding: 0;
+    }
 }
 
 /* Hiding elements after tablet screeen */
@@ -197,7 +219,7 @@
     }
 
     .login-btn-au {
-        margin-top: 35px;
+        /* margin-top: 35px; */
     }
 
     .forgot-pwd-txt {
@@ -231,9 +253,13 @@
     .links-container{
         margin-top: 10px;
     }
-    .input-field{
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-size: 40px;
+    .login-form{
+        height: 260px;
+    }
+    .message{
+        font-size: 40px !important;
+    }
+    .return-link{
+        font-size: 40px !important;
     }
 }

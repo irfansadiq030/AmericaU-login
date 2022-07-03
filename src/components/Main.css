@@ -2,16 +2,27 @@
     background-image: url('../../public/images/login-screen-bg.png');
     min-height: 100vh;
 }
-
+.header{
+    /* background-color: red; */
+    height: 30vh;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 .logo {
     width: 100%;
-    max-width: 200px;
+    max-width: 230px;
 }
 
 .components-container {
     width: 45%;
     margin-left: auto;
     margin-right: auto;
+    height: 70vh;
+    background-color: orange;
+    z-index: 2;
 }
 
 /* Component Container Responsiveness */
@@ -21,12 +32,12 @@
 @media screen and (max-width:600px) {
 
     .components-container {
-        width: 100% !important;
+        width: 90% !important;
     }
 
     .logo {
         width: 100%;
-        max-width: 140px;
+        max-width: 105px;
         margin: 0 auto;
         height: 20%;
     }
@@ -35,7 +46,7 @@
 
 @media screen and (min-width:768px) {
     .components-container {
-        width: 80% !important;
+        width: 70% !important;
         /* margin-top: 40px; */
     }
 
@@ -64,5 +75,9 @@
 @media screen and (min-width:1500px) {
     .components-container {
         width: 45% !important;
+    }
+    .logo {
+        width: 100%;
+        max-width: 280px;
     }
 }
