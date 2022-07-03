@@ -114,7 +114,7 @@
         1px 3px 2px #000,
         1px -1px 0 #000,
         -1px -1px 0 #000;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 .links-container{
     margin-top: 20px;
@@ -255,6 +255,7 @@
     }
     .login-form{
         height: 260px;
+        padding-top: 10px;
     }
     .message{
         font-size: 40px !important;
@@ -262,7 +263,7 @@
     .return-link{
         font-size: 40px !important;
     }
-    .bottom-container{
+    /* .bottom-container{
         height: 20vh !important;
-    }
+    } */
 }
