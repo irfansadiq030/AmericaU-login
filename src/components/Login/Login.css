@@ -262,4 +262,7 @@
     .return-link{
         font-size: 40px !important;
     }
+    .bottom-container{
+        height: 20vh !important;
+    }
 }
