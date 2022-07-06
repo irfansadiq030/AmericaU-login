@@ -123,7 +123,7 @@ input[type="password"]::placeholder{
         1px 3px 2px #000,
         1px -1px 0 #000,
         -1px -1px 0 #000;
-    margin-top: -20px;
+    margin-top: -25px;
 }
 .links-container{
     margin-top: 20px;
@@ -240,11 +240,11 @@ input[type="password"]::placeholder{
     }
 
     .login-class-btn {
-        font-size: 45px;
+        font-size: 37px;
     }
 
     .forgot-pwd-container {
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
 
     .learn-more-heading,
