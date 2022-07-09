@@ -28,7 +28,7 @@ const SignUpComingSoon = () => {
                         </div>
 
                         <div className="">
-                            <button className='btn-americau green-btn w-full uppercase'>Login</button>
+                            <button className='btn-americau green-btn w-full uppercase'>Confirm</button>
                         </div>
                     </form>
 
