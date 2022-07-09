@@ -1,0 +1,40 @@
+.sign-up-comingsoon-container{
+    min-height: 95%;
+    
+}
+.sign-up-comingsoon-heading-container{
+    width: 80%;
+}
+.signup-comingsoon-main{
+    flex: 0.7 0 auto;
+}
+.signup-coming-soon-heading{
+    line-height: .8;
+}
+.info-text{
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+}
+@media screen and (max-width:428px) {
+    .sign-up-comingsoon-container{
+        min-height: 60% !important;
+    }
+    .info-text{
+        font-size: 22px;
+    }
+}
+@media screen and (min-width:1500px) {
+    .sign-up-comingsoon-container{
+        min-height: 80% !important;
+    }
+    .sign-up-comingsoon-heading-container{
+        width: 60%;
+    }
+    .signup-coming-soon-heading{
+        font-size: 90px;
+    }
+    .info-text{
+        font-size: 40px;
+    }
+}

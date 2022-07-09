@@ -42,7 +42,7 @@ const Login = () => {
                 <Link to="/forgotpassword"> <h1 className="learn-more-heading uppercase">Learn More</h1> </Link>
                     <div className="flex flex-col items-center">
                         <p className='dont-have-account uppercase'>Don't have an account?</p>
-                        <a href="/"><h1 className="signup-text uppercase">Sign Up</h1></a>
+                        <Link to="/signupcomingsoon"><h1 className="signup-text uppercase">Sign Up</h1></Link>
                     </div>
                 </div>
             </div>
