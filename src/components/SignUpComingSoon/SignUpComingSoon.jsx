@@ -24,7 +24,7 @@ const SignUpComingSoon = () => {
                             </h1>
                         </div>
                         <div className="">
-                            <input name="email" type="text" placeholder="Email Addrress" class="w-full input-field mb-2" />
+                            <input name="email" type="text" placeholder="Email Address" class="w-full input-field mb-2" />
                         </div>
 
                         <div className="">
