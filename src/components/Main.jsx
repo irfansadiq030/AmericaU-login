@@ -6,6 +6,7 @@ import ResetPassword from './ResetPassword/ResetPassword'
 import MessageViewer from './MessageViewer/MessageViewer'
 import ForgotPassword from './ForgotPassword/ForgotPassword'
 import SignUpComingSoon from './SignUpComingSoon/SignUpComingSoon'
+import ThankYou from './ThankYou/ThankYou'
 import { Routes, Route } from 'react-router-dom'
 
 
@@ -26,6 +27,7 @@ const Main = () => {
                     <Route path="/forgotpassword" element={<ForgotPassword />} />
                     <Route path="/resetpassword" element={<ResetPassword />} />
                     <Route path="/signupcomingsoon" element={<SignUpComingSoon />} />
+                    <Route path="/thankyou" element={<ThankYou />} />
                 </Routes>
             </div>
 
