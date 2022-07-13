@@ -17,7 +17,7 @@ const ThankYou = () => {
             {/* Box Content Container */}
             <main className='signup-comingsoon-main flex-col flex items-center justify-center'>
                 <h1 className="info-text">
-                    We will email you soon, here!
+                    We will email you soon!
                 </h1>
                 <img className='robo-icon' src="images/robo.png" alt="" />
 
