@@ -1,9 +1,11 @@
 import React from 'react'
 import './MessageViewer.css'
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom'
 
 const ForgotPassword = (props) => {
     console.log(props.message)
+    const location = useLocation();
+    console.log(location.state.msg);
     return (
         <>
 
@@ -20,7 +22,11 @@ const ForgotPassword = (props) => {
 
                 {/* Box Content Container */}
                 <main className='main flex-col flex items-center justify-center'>
-                    <h1 className='message'>{props.message}</h1>
+                    <h1 className='message'>
+                        {
+                            location.state.msg && location.state.msg
+                        }
+                    </h1>
                     {
                         props.is_link && props.is_link === true ? 
                         <Link className='return-link uppercase' to="/">Return to Login</Link>
