@@ -1,19 +1,18 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { useState } from 'react'
+import Spinner from '../Shared/Spinner/Spinner'
+import { Field, Formik, ErrorMessage } from 'formik'
+import * as yup from "yup"
 
 const Login = () => {
     const navigate = useNavigate();
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
 
-
-
-    const handleSubmit = async (event) => {
+    const handleSubmit = async ({ username, password }, actions) => {
         try {
-            event.preventDefault();
+
+            console.log("yes")
 
             const formData = new FormData();
             formData.append('cmd', 'WoogiOAuth.signInMod');
@@ -23,7 +22,11 @@ const Login = () => {
             let result = await axios.post(
                 "https://portal.americau.com/woogi/0.1/actor/cgi.php",
                 formData
-            )
+            );
+
+            if (result.data.code == 200) {
+                return window.location.href = "https://portal.americau.com/index"
+            }
 
             if (result.data.code !== 200) {
                 // navigate('/messageviewer');
@@ -34,6 +37,16 @@ const Login = () => {
             window.alert(error.message)
         }
     }
+
+    const init = {
+        username: "",
+        password: ""
+    }
+
+    const validation = yup.object({
+        username: yup.string().required().label("Username"),
+        password: yup.string().min(6).required().label("Password")
+    })
 
     return (
         <>
@@ -46,23 +59,32 @@ const Login = () => {
 
                 {/* Box Content Container */}
                 <main className='login-main flex-col flex items-center justify-center'>
-                    <form action="/" className='w-full login-form flex justify-between flex-col'>
-                        <div className="">
-                            <input onChange={(e) => setUsername(e.target.value)} value={username} name="username" type="text" placeholder="Username" class="w-full input-field" />
-                        </div>
-                        <div className="">
-                            <input onChange={(e) => setPassword(e.target.value)} value={password} name="password" type='password' placeholder="Password" class="w-full input-field" />
-                        </div>
-                        <div className="">
-                            <button onClick={(event) => handleSubmit(event)} className='btn-americau green-btn w-full uppercase'>Login</button>
-                        </div>
-                    </form>
-                    <div className="forgot-pwd-container uppercase flex justify-end w-full">
-                        {/* <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link> */}
-                    </div>
-                    <div className='flex flex-col items-center mt-10'>
+                    <Formik validationSchema={validation} initialValues={init} onSubmit={handleSubmit} >
+                        {({ errors, isSubmitting, handleSubmit }) => {
+                            return <div className='w-full login-form'>
+                                <div className='mb-2'>
+                                    <Field name="username" type="text" placeholder="Username" className="w-full input-field" />
+                                    {errors.username && <p className='text-red-600 '>{errors.username}</p>}
+                                </div>
+
+                                <div className='mb-2'>
+                                    <Field name="password" type='password' placeholder="Password" className="w-full input-field" />
+                                    {errors.password && <p className='text-red-600 '>{errors.password}</p>}
+                                </div>
+
+                                <div className="mb-2">
+                                    <button onClick={handleSubmit} className='btn-americau green-btn w-full uppercase' disabled={isSubmitting}>{isSubmitting ? <Spinner /> : "Login"}</button>
+                                </div>
+                            </div>
+                        }}
+                    </Formik>
+
+                    {/*  <div className="forgot-pwd-container uppercase flex justify-end w-full">
+                    <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link> 
+                    </div>*/}
+                    <div className='flex flex-col items-center'>
                         <p className='or-text' >OR</p>
-                        <Link to="/" className="uppercase login-class-btn">Login with classLink</Link>
+                        <a href='https://api.americau.com/login/classlink' className="uppercase login-class-btn">Login with classLink</a>
 
                         {/* this Text will be display only on Tablet and Mobile screen */}
                         {/* <Link to="/resetpassword" className='forgot-pwd-txt2'>Forgot Password?</Link> */}

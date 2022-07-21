@@ -19,7 +19,7 @@ const ForgotPassword = () => {
                 <main className='login-main flex-col flex items-center justify-center'>
                     <form action="/" className='w-full reset-form login-form flex justify-between flex-col'>
                         <div className="">
-                            <input name="Username" type="text" placeholder="Username" class="w-full input-field" />
+                            <input name="Username" type="text" placeholder="Username" className="w-full input-field" />
                         </div>
                         <div className="">
                             <button className='btn-americau green-btn w-full uppercase'>Reset</button>
