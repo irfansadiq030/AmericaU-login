@@ -6,17 +6,20 @@ import { useState } from 'react'
 
 const Login = () => {
     const navigate = useNavigate();
-    const [userName, setUserName] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const formData = new FormData();
-    formData.append('cmd', 'WoogiOAuth.signInMod');
-    formData.append('name', userName.trim());
-    formData.append('password', password.trim());
+
 
     const handleSubmit = async (event) => {
         try {
             event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('cmd', 'WoogiOAuth.signInMod');
+            formData.append('name', username.trim());
+            formData.append('password', password.trim());
+
             let result = await axios.post(
                 "https://portal.americau.com/woogi/0.1/actor/cgi.php",
                 formData
@@ -28,7 +31,7 @@ const Login = () => {
             }
 
         } catch (error) {
-            console.log(error)
+            window.alert(error.message)
         }
     }
 
@@ -45,7 +48,7 @@ const Login = () => {
                 <main className='login-main flex-col flex items-center justify-center'>
                     <form action="/" className='w-full login-form flex justify-between flex-col'>
                         <div className="">
-                            <input onChange={(e) => setUserName(e.target.value)} value={userName} name="username" type="text" placeholder="Username" class="w-full input-field" />
+                            <input onChange={(e) => setUsername(e.target.value)} value={username} name="username" type="text" placeholder="Username" class="w-full input-field" />
                         </div>
                         <div className="">
                             <input onChange={(e) => setPassword(e.target.value)} value={password} name="password" type='password' placeholder="Password" class="w-full input-field" />
