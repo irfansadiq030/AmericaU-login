@@ -238,9 +238,6 @@ input[type="password"]::placeholder {
     font-size: 25px;
   }
 
-  .or-text {
-    margin-top: -35px;
-  }
   .links-container {
     margin-top: 10px;
   }
