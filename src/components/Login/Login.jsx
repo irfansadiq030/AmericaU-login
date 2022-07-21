@@ -11,9 +11,6 @@ const Login = () => {
 
     const handleSubmit = async ({ username, password }, actions) => {
         try {
-
-            console.log("yes")
-
             const formData = new FormData();
             formData.append('cmd', 'WoogiOAuth.signInMod');
             formData.append('name', username.trim());
