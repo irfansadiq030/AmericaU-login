@@ -58,7 +58,7 @@ const Login = () => {
                         {/* <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link> */}
                     </div>
                     <div className='flex flex-col items-center mt-10'>
-                        <Link className='or-text' to="/messageviewer" >OR</Link>
+                        <p className='or-text' >OR</p>
                         <Link to="/" className="uppercase login-class-btn">Login with classLink</Link>
 
                         {/* this Text will be display only on Tablet and Mobile screen */}
