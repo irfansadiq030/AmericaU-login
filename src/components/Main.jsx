@@ -24,8 +24,8 @@ const Main = () => {
                 <Routes>
                     <Route path="/" element={<Login />} />
                     <Route path="/messageviewer" element={<MessageViewer message={message} is_link={true} />} />
-                    <Route path="/forgotpassword" element={<ForgotPassword />} />
-                    <Route path="/resetpassword" element={<ResetPassword />} />
+                    {/* <Route path="/forgotpassword" element={<ForgotPassword />} />
+                    <Route path="/resetpassword" element={<ResetPassword />} /> */}
                     <Route path="/signupcomingsoon" element={<SignUpComingSoon />} />
                     <Route path="/thankyou" element={<ThankYou />} />
                 </Routes>

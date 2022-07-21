@@ -30,7 +30,7 @@ const ForgotPassword = () => {
 
                 {/* Footer Container */}
                 <div className="bottom-container flex justify-between items-end">
-                    <Link to="/forgotpassword"> <h1 className="learn-more-heading uppercase">Learn More</h1> </Link>
+                    <a href='https://heroesleaguegameday.com/'> <h1 className="learn-more-heading uppercase">Learn More</h1> </a>
                     <div className="flex flex-col items-center">
                         <p className='dont-have-account uppercase'>Don't have an account?</p>
                         <a href="/"><h1 className="signup-text uppercase">Sign Up</h1></a>

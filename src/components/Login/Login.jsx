@@ -1,6 +1,6 @@
 import React from 'react'
 import './Login.css'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 
@@ -22,11 +22,11 @@ const Login = () => {
                 formData
             )
 
-            if (result.data.code !==200) {
+            if (result.data.code !== 200) {
                 // navigate('/messageviewer');
-                navigate('/messageviewer', { state: {msg:result.data.msg} });
+                navigate('/messageviewer', { state: { msg: result.data.msg } });
             }
-            
+
         } catch (error) {
             console.log(error)
         }
@@ -55,20 +55,20 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="forgot-pwd-container uppercase flex justify-end w-full">
-                        <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link>
+                        {/* <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link> */}
                     </div>
-                    <div className='flex flex-col items-center'>
+                    <div className='flex flex-col items-center mt-10'>
                         <Link className='or-text' to="/messageviewer" >OR</Link>
                         <Link to="/" className="uppercase login-class-btn">Login with classLink</Link>
 
                         {/* this Text will be display only on Tablet and Mobile screen */}
-                        <Link to="/resetpassword" className='forgot-pwd-txt2'>Forgot Password?</Link>
+                        {/* <Link to="/resetpassword" className='forgot-pwd-txt2'>Forgot Password?</Link> */}
                     </div>
                 </main>
 
                 {/* Footer Container */}
                 <div className="bottom-container flex justify-between items-end">
-                    <Link to="/forgotpassword"> <h1 className="learn-more-heading uppercase">Learn More</h1> </Link>
+                    <a href='https://heroesleaguegameday.com/'> <h1 className="learn-more-heading uppercase">Learn More</h1> </a>
                     <div className="flex flex-col items-center">
                         <p className='dont-have-account uppercase'>Don't have an account?</p>
                         <Link to="/signupcomingsoon"><h1 className="signup-text uppercase">Sign Up</h1></Link>
