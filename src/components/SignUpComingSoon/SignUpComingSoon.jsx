@@ -19,7 +19,7 @@ const SignUpComingSoon = () => {
             formData.append('email', value);
 
             try {
-                const { data } = await axios.post("https://portal.americau.com/woogi/0.1/actor/cgi.php", formData);
+                const { data } = await axios.post("./woogi/0.1/actor/cgi.php", formData);
                 if (data == 200) {
                     navigate("/thankyou");
                 } else

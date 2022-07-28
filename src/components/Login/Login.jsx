@@ -1,13 +1,35 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Spinner from '../Shared/Spinner/Spinner'
-import { Field, Formik, ErrorMessage } from 'formik'
+import { Field, Formik, ErrorMessage, Form } from 'formik'
 import * as yup from "yup"
 
 const Login = () => {
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+
+        const checkForLogin = async () => {
+
+            try {
+                const { data } = await axios.post("./woogi/0.1/actor/cgi.php?cmd=WoogiOAuth.portalLoginStatus")
+
+                if (+data === 200) {
+                    return window.location.href = "./index"
+                }
+            } catch (error) {
+                window.alert(error.message)
+            }
+
+            setLoading(false)
+        }
+
+        checkForLogin()
+    }, [])
+
 
     const handleSubmit = async ({ username, password }, actions) => {
         try {
@@ -17,12 +39,12 @@ const Login = () => {
             formData.append('password', password.trim());
 
             let result = await axios.post(
-                "https://portal.americau.com/woogi/0.1/actor/cgi.php",
+                "./woogi/0.1/actor/cgi.php",
                 formData
             );
 
             if (result.data.code == 200) {
-                return window.location.href = "https://portal.americau.com/index"
+                return window.location.href = "./index"
             }
 
             if (result.data.code !== 200) {
@@ -56,25 +78,31 @@ const Login = () => {
 
                 {/* Box Content Container */}
                 <main className='login-main flex-col flex items-center justify-center'>
-                    <Formik validationSchema={validation} initialValues={init} onSubmit={handleSubmit} >
+                    {!loading && <Formik validationSchema={validation} initialValues={init} onSubmit={handleSubmit} >
                         {({ errors, isSubmitting, handleSubmit }) => {
+
                             return <div className='w-full login-form'>
-                                <div className='mb-2'>
-                                    <Field name="username" type="text" placeholder="Username" className="w-full input-field" />
-                                    {errors.username && <p className='text-red-600 '>{errors.username}</p>}
-                                </div>
+                                <Form onKeyDown={(e) => e.key == "Enter" && handleSubmit()}>
+                                    <div className='mb-2'>
+                                        <Field name="username" type="text" placeholder="Username" className="w-full input-field" />
+                                        {errors.username && <p className='text-red-600 '>{errors.username}</p>}
+                                    </div>
 
-                                <div className='mb-2'>
-                                    <Field name="password" type='password' placeholder="Password" className="w-full input-field" />
-                                    {errors.password && <p className='text-red-600 '>{errors.password}</p>}
-                                </div>
+                                    <div className='mb-2'>
+                                        <Field name="password" type='password' placeholder="Password" className="w-full input-field" />
+                                        {errors.password && <p className='text-red-600 '>{errors.password}</p>}
+                                    </div>
 
-                                <div className="mb-2">
-                                    <button onClick={handleSubmit} className='btn-americau green-btn w-full uppercase' disabled={isSubmitting}>{isSubmitting ? <Spinner /> : "Login"}</button>
-                                </div>
+                                    <div className="mb-2">
+                                        <button onClick={handleSubmit} className='btn-americau green-btn w-full uppercase' disabled={isSubmitting}>{isSubmitting ? <Spinner /> : "Login"}</button>
+                                    </div>
+                                </Form>
                             </div>
+
                         }}
-                    </Formik>
+                    </Formik>}
+
+                    {loading && <Spinner />}
 
                     {/*  <div className="forgot-pwd-container uppercase flex justify-end w-full">
                     <Link to="/resetpassword" className='forgot-pwd-txt'>Forgot Password?</Link> 
